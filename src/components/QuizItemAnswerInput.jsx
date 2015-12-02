@@ -6,21 +6,24 @@ export class QuizItemAnswerInput extends React.Component {
     return (
       <div>
 
-        <div ref="options">
+        <div ref="options" className="btn-group btn-group-lg btn-group-justified">
           {(() => {
             let renderedOptions = [];
             for (let option of this.props.quizItem.options) {
               renderedOptions.push(
-                <div
+                <a
                   key={option}
                   onClick={() => {
                     this.props.submitAnswer({
                       submission: option
                     });
                   }}
+                  role="button"
+                  className="btn btn-primary"
+                  href="javascript:null"
                   >
                   {option}
-                </div>
+                </a>
               );
             }
             return renderedOptions;
