@@ -31,6 +31,61 @@ export function genRenderers(opts) {
 
 }
 
+export function genFixtureGens () {
+  let fixtureGens = {
+
+    genQuizItem: function (opts) {
+      let key = opts.key;
+      if (typeof key === 'undefined') {
+        key = '<key>';
+      }
+
+      let quizItem = {
+        question: `question-${key}`,
+        answer: {
+          key,
+          text: `text-${key}`,
+          imgSrc: `img-${key}`,
+        },
+        options: [
+          `option1-${key}`,
+          `option2-${key}`,
+        ],
+      }
+
+      if (opts.withCorrectSubmission) {
+        quizItem.submission = quizItem.answer.key;
+      }
+      else if (opts.withIncorrectSubmission) {
+        quizItem.submission = 'incorrect';
+      }
+
+      return quizItem;
+    },
+
+  };
+
+  return fixtureGens;
+
+}
+
+export function genFixtures() {
+  let fixtures = {};
+
+  let fixtureGens = genFixtureGens();
+
+  fixtures.quizItems = [];
+
+  for (let i = 0; i < 3; i++) {
+    let quizItem = fixtureGens.genQuizItem({ key: i });
+    fixtures.quizItems.push(quizItem);
+  }
+
+  return fixtures;
+}
+
 export default {
+  genFixtures,
+  genFixtureGens,
   genRenderers,
 };

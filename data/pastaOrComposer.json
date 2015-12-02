@@ -1,0 +1,92 @@
+[
+  {
+    "type": "pasta", 
+    "name": "Matriciani", 
+    "img": "http://promo.musicradio.com/games/pick-a-side/themes/composer-or-pasta/thumbs/b1.jpg", 
+    "description": "Similar to spaghetti, but with folded strands."
+  }, 
+  {
+    "type": "pasta", 
+    "name": "Fedelini", 
+    "img": "http://promo.musicradio.com/games/pick-a-side/themes/composer-or-pasta/thumbs/b2.jpg", 
+    "description": "An especially thin variety of spaghetti."
+  }, 
+  {
+    "type": "composer", 
+    "name": "Donizetti", 
+    "img": "http://promo.musicradio.com/games/pick-a-side/themes/composer-or-pasta/thumbs/a3.jpg", 
+    "description": "Gaetano Donizetti (1797-1848) was one of the most notable opera composers of the 19th century."
+  }, 
+  {
+    "type": "composer", 
+    "name": "Campagnoli", 
+    "img": "http://promo.musicradio.com/games/pick-a-side/themes/composer-or-pasta/thumbs/a4.jpg", 
+    "description": "Bartolomeo Campagnoli (1751-1827) was a touring virtuoso violinist as well as an admired composer."
+  }, 
+  {
+    "type": "composer", 
+    "name": "Galuppi", 
+    "img": "http://promo.musicradio.com/games/pick-a-side/themes/composer-or-pasta/thumbs/a5.jpg", 
+    "description": "Baldassare Galuppi (1706-1785) was a successful composer who spent time in London and St Petersburg."
+  }, 
+  {
+    "type": "pasta", 
+    "name": "Bigoli", 
+    "img": "http://promo.musicradio.com/games/pick-a-side/themes/composer-or-pasta/thumbs/b6.jpg", 
+    "description": "A thick pasta made from buckwheat or wholewheat flour."
+  }, 
+  {
+    "type": "pasta", 
+    "name": "Capellini", 
+    "img": "http://promo.musicradio.com/games/pick-a-side/themes/composer-or-pasta/thumbs/b7.jpg", 
+    "description": "A pasta that literally translates as 'thin hair' in Italian."
+  }, 
+  {
+    "type": "composer", 
+    "name": "Boccherini", 
+    "img": "http://promo.musicradio.com/games/pick-a-side/themes/composer-or-pasta/thumbs/a8.jpg", 
+    "description": "Luigi Boccherini (1743-1805) was most famous for his popular Minuet from the string quartet in E."
+  }, 
+  {
+    "type": "composer", 
+    "name": "Busoni", 
+    "img": "http://promo.musicradio.com/games/pick-a-side/themes/composer-or-pasta/thumbs/a9.jpg", 
+    "description": "Ferruccio Busoni (1866-1924) was a forward-thinking composer who was famous for his pioneering piano works."
+  }, 
+  {
+    "type": "pasta", 
+    "name": "Pellizzoni", 
+    "img": "http://promo.musicradio.com/games/pick-a-side/themes/composer-or-pasta/thumbs/b10.jpg", 
+    "description": "A thick form of spaghetti."
+  }, 
+  {
+    "type": "composer", 
+    "name": "Alfano", 
+    "img": "http://promo.musicradio.com/games/pick-a-side/themes/composer-or-pasta/thumbs/a11.jpg", 
+    "description": "Franco Alfano (1875-1954) was best known for his opera Risurrezione, written in 1904."
+  }, 
+  {
+    "type": "composer", 
+    "name": "Frescobaldi", 
+    "img": "http://promo.musicradio.com/games/pick-a-side/themes/composer-or-pasta/thumbs/a12.jpg", 
+    "description": "Girolamo Frescobaldi (1583-1643) was an early baroque composer and keyboard specialist."
+  }, 
+  {
+    "type": "pasta", 
+    "name": "Bucatini", 
+    "img": "http://promo.musicradio.com/games/pick-a-side/themes/composer-or-pasta/thumbs/b13.jpg", 
+    "description": "A pasta similar to spaghetti, but with a hole running through the centre."
+  }, 
+  {
+    "type": "pasta", 
+    "name": "Fusilli", 
+    "img": "http://promo.musicradio.com/games/pick-a-side/themes/composer-or-pasta/thumbs/b14.jpg", 
+    "description": "A twirled pasta shape derived from the Italian word 'fuso', meaning 'spun'."
+  }, 
+  {
+    "type": "pasta", 
+    "name": "Perciatelli", 
+    "img": "http://promo.musicradio.com/games/pick-a-side/themes/composer-or-pasta/thumbs/b15.jpg", 
+    "description": "Similar to spaghetti, but with folded strands, identical to Matriciani."
+  }
+]

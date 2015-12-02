@@ -3,36 +3,66 @@ import React       from 'react';
 import { connect } from 'react-redux';
 
 import { ActionCreators } from '../actions/actions';
-import { BoringComponent } from '../components/BoringComponent';
+import QuizItem from '../components/QuizItem';
 
 
 export class IndexView extends React.Component {
 
   static defaultProps = {
-    boring: {},
-  };
+    quizItemIndex: 0,
+  }
+
+  componentDidMount () {
+    this.props.dispatch(ActionCreators.fetchQuizItems());
+  }
 
   render () {
+    let { quizItemIndex, quizItems } = this.props;
     return (
       <div>
-        <BoringComponent
-          boringProp={this.props.boring.value}
-          setBoringValue={(newValue) => {this._setBoringValue(newValue)}}
-        />
+        {(() => {
+          if (quizItems && (quizItems.length > 0)) {
+            if (quizItemIndex < this.props.quizItems.length) {
+              return (
+                <QuizItem ref="quizItem"
+                  quizItem={quizItems[quizItemIndex]}
+                  submitAnswer={(kwargs) => {
+                    this._submitAnswer(Object.assign({
+                      quizItemIndex
+                    }, kwargs));
+                  }}
+                  incrementQuizItemIndex={() => {
+                    this._incrementQuizItemIndex()
+                  }}
+                />
+              )
+            } else {
+              return (
+                <div ref="doneMessage">
+                  'done!'
+                </div>
+              )
+            }
+          } else {
+            return 'no quiz items!';
+          }
+        })()}
       </div>
     );
   }
 
-  _setBoringValue(newValue) {
-    this.props.dispatch(ActionCreators.receiveBoringValue(newValue));
+  _submitAnswer (kwargs) {
+    this.props.dispatch(ActionCreators.submitAnswer(kwargs));
+  }
+
+  _incrementQuizItemIndex () {
+    this.props.dispatch(ActionCreators.incrementQuizItemIndex());
   }
 
 }
 
 const mapStateToProps = (state) => {
-  return {
-    boring: state.boring,
-  };
+  return state;
 };
 
 export default connect(mapStateToProps)(IndexView);

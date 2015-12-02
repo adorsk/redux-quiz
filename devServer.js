@@ -37,6 +37,11 @@ devServer.get(appPath, function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+// Serve data.
+devServer.get(appPath + "data/pastaOrComposer.json", function(req, res) {
+  res.sendFile(path.join(__dirname, 'data/pastaOrComposer.json'));
+});
+
 // Serve other requests from webpack dev middleware.
 devServer.use(appPath, webpackDevMiddleware(compiler, {
   noInfo: true,
