@@ -5,7 +5,6 @@ export class QuizItemAnswerInput extends React.Component {
   render () {
     return (
       <div>
-
         <div ref="options" className="btn-group btn-group-lg btn-group-justified">
           {(() => {
             let renderedOptions = [];
@@ -29,7 +28,6 @@ export class QuizItemAnswerInput extends React.Component {
             return renderedOptions;
           })()}
         </div>
-
       </div>
     );
   }
