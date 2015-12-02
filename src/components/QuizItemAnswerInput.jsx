@@ -1,14 +1,10 @@
 import React from 'react';
 
 
-export class QuizItemQuestion extends React.Component {
+export class QuizItemAnswerInput extends React.Component {
   render () {
     return (
       <div>
-
-        <div ref="question">
-          {this.props.quizItem.question}
-        </div>
 
         <div ref="options">
           {(() => {
@@ -36,4 +32,4 @@ export class QuizItemQuestion extends React.Component {
   }
 }
 
-export default QuizItemQuestion;
+export default QuizItemAnswerInput;

@@ -16,6 +16,13 @@ describe("QuizItem", function() {
     defaultProps,
   });
 
+  describe("question", function() {
+    it("renders the question", function() {
+      let rendered = renderers.renderWithProps();
+      expect(rendered.refs.question.innerHTML)
+        .toContain(rendered.props.quizItem.question);
+    });
+  });
 
   describe("when it has no submission", function() {
     let rendered;
@@ -29,8 +36,8 @@ describe("QuizItem", function() {
       });
     });
 
-    it("renders quiz item question", function() {
-      expect(rendered.refs.question).toBeTruthy();
+    it("renders answer input", function() {
+      expect(rendered.refs.answerInput).toBeTruthy();
     });
 
     it ("does not render result", function() {
@@ -54,8 +61,8 @@ describe("QuizItem", function() {
       expect(rendered.refs.result).toBeTruthy();
     });
 
-    it("does not render quiz item question", function() {
-      expect(rendered.refs.question).toBeFalsy();
+    it("does not render answer input", function() {
+      expect(rendered.refs.answerInput).toBeFalsy();
     });
   });
 });

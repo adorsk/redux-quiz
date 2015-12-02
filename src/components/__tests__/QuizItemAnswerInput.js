@@ -1,10 +1,10 @@
 import TestUtils from  'react-addons-test-utils';
 
-import { QuizItemQuestion } from '../QuizItemQuestion';
+import { QuizItemAnswerInput } from '../QuizItemAnswerInput';
 import TestHelpers from '../../utils/TestHelpers.js';
 
 
-describe("QuizItemQuestion", function() {
+describe("QuizItemAnswerInput", function() {
 
   let fixtures = TestHelpers.genFixtures();
 
@@ -13,16 +13,8 @@ describe("QuizItemQuestion", function() {
   };
 
   let renderers = TestHelpers.genRenderers({
-    componentClass: QuizItemQuestion,
+    componentClass: QuizItemAnswerInput,
     defaultProps,
-  });
-
-  describe("question", function() {
-    it("renders the question content", function() {
-      let rendered = renderers.renderWithProps();
-      expect(rendered.refs.question.innerHTML)
-        .toContain(rendered.props.quizItem.question);
-    });
   });
 
   describe("answer buttons", function() {

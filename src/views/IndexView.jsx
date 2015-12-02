@@ -19,34 +19,37 @@ export class IndexView extends React.Component {
   render () {
     let { quizItemIndex, quizItems } = this.props;
     return (
-      <div>
-        {(() => {
-          if (quizItems && (quizItems.length > 0)) {
-            if (quizItemIndex < this.props.quizItems.length) {
-              return (
-                <QuizItem ref="quizItem"
-                  quizItem={quizItems[quizItemIndex]}
-                  submitAnswer={(kwargs) => {
-                    this._submitAnswer(Object.assign({
-                      quizItemIndex
-                    }, kwargs));
-                  }}
-                  incrementQuizItemIndex={() => {
-                    this._incrementQuizItemIndex()
-                  }}
-                />
-              )
+      <div className="container">
+        <h1>Pasta or Composer?</h1>
+        <div className="well well-lg">
+          {(() => {
+            if (quizItems && (quizItems.length > 0)) {
+              if (quizItemIndex < this.props.quizItems.length) {
+                return (
+                  <QuizItem ref="quizItem"
+                    quizItem={quizItems[quizItemIndex]}
+                    submitAnswer={(kwargs) => {
+                      this._submitAnswer(Object.assign({
+                        quizItemIndex
+                      }, kwargs));
+                    }}
+                    incrementQuizItemIndex={() => {
+                      this._incrementQuizItemIndex()
+                    }}
+                  />
+                )
+              } else {
+                return (
+                  <div ref="doneMessage">
+                    'done!'
+                  </div>
+                )
+              }
             } else {
-              return (
-                <div ref="doneMessage">
-                  'done!'
-                </div>
-              )
+              return 'no quiz items!';
             }
-          } else {
-            return 'no quiz items!';
-          }
-        })()}
+          })()}
+        </div>
       </div>
     );
   }
