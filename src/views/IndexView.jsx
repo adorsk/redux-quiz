@@ -20,35 +20,39 @@ export class IndexView extends React.Component {
     let { quizItemIndex, quizItems } = this.props;
     return (
       <div className="container">
-        <h1>Pasta or Composer?</h1>
-        <div className="well well-lg">
-          {(() => {
-            if (quizItems && (quizItems.length > 0)) {
-              if (quizItemIndex < this.props.quizItems.length) {
-                return (
-                  <QuizItem ref="quizItem"
-                    quizItem={quizItems[quizItemIndex]}
-                    submitAnswer={(kwargs) => {
-                      this._submitAnswer(Object.assign({
-                        quizItemIndex
-                      }, kwargs));
-                    }}
-                    incrementQuizItemIndex={() => {
-                      this._incrementQuizItemIndex()
-                    }}
-                  />
-                )
-              } else {
-                return (
-                  <div ref="doneMessage">
-                    'done!'
-                  </div>
-                )
-              }
-            } else {
-              return 'no quiz items!';
-            }
-          })()}
+        <div className="row">
+          <div className="col-xs-8">
+            <h1>Pasta or Composer?</h1>
+            <div className="well well-lg">
+              {(() => {
+                if (quizItems && (quizItems.length > 0)) {
+                  if (quizItemIndex < this.props.quizItems.length) {
+                    return (
+                      <QuizItem ref="quizItem"
+                        quizItem={quizItems[quizItemIndex]}
+                        submitAnswer={(kwargs) => {
+                          this._submitAnswer(Object.assign({
+                            quizItemIndex
+                          }, kwargs));
+                        }}
+                        incrementQuizItemIndex={() => {
+                          this._incrementQuizItemIndex()
+                        }}
+                      />
+                    )
+                  } else {
+                    return (
+                      <div ref="doneMessage">
+                        'done!'
+                      </div>
+                    )
+                  }
+                } else {
+                  return 'no quiz items!';
+                }
+              })()}
+            </div>
+          </div>
         </div>
       </div>
     );
