@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-export class App extends Component {
+export class AppContainer extends Component {
   render () {
     return (
       <div>
@@ -10,3 +10,5 @@ export class App extends Component {
     );
   }
 }
+
+export default AppContainer;

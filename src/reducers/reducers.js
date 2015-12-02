@@ -1,3 +1,6 @@
+import { combineReducers } from 'redux';
+
+
 export let reducers = {
   quizItems: function(prevState = [], action) {
     let nextState;
@@ -31,6 +34,9 @@ export let reducers = {
   }
 };
 
+export let rootReducer = combineReducers(reducers);
+
 export default {
   reducers,
+  rootReducer,
 };
